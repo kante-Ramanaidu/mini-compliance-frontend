@@ -28,7 +28,7 @@ Database: PostgreSQL
 Deployment: Render
 
 
-
+Setup Instructions
 
 Frontend
 Navigate to frontend folder:
