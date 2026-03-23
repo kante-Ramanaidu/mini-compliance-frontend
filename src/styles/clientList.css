@@ -1,0 +1,221 @@
+/* MAIN CONTAINER */
+.client-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+.client-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+/* SEARCH */
+.client-search {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.client-search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.1);
+}
+
+/* ADD CLIENT BUTTON */
+.add-client-btn {
+  padding: 10px;
+  background: linear-gradient(135deg,#2563eb,#3b82f6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.add-client-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+
+/* CLIENT LIST */
+.client-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 420px;
+  padding-right: 4px;
+}
+
+/* SCROLLBAR */
+.client-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.client-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+/* CLIENT ITEM */
+.client-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.client-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+.client-item.active {
+  background: #eef4ff;
+  border: 1px solid #2563eb;
+}
+
+/* AVATAR */
+.client-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* NAME */
+.client-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* ADD CLIENT FORM */
+.client-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.client-form input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.client-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.1);
+}
+
+.client-form button {
+  padding: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.client-form button:hover {
+  background: #1e40af;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+  .client-container {
+    padding: 12px;
+  }
+
+  .client-header {
+    font-size: 13px;
+  }
+
+  .client-item {
+    padding: 10px;
+  }
+
+  .client-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .client-name {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .client-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .client-search {
+    font-size: 12px;
+  }
+
+  .client-item {
+    gap: 8px;
+  }
+
+}

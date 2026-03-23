@@ -1,0 +1,132 @@
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f6f8fb;
+  color: #1f2937;
+}
+
+
+.header {
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.dashboard {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 18px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.3s ease;
+}
+
+
+.sidebar h3 {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+
+.sidebar a {
+  text-decoration: none;
+  color: #374151;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+  display: block;
+}
+
+.sidebar a:hover {
+  background: #f1f5f9;
+}
+
+
+.sidebar a.active {
+  background: #eef2ff;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+.main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .main {
+    padding: 18px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .sidebar a {
+    white-space: nowrap;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+}
