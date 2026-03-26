@@ -13,7 +13,7 @@ Filter tasks by status and category
 The goal of this project is to demonstrate a working end-to-end full-stack application.
 
 Live Demo
-Frontend (Deployed): https://mini-compliance-frontend-1.onrender.com
+Frontend (Deployed): [https:(https://mini-compliance-frontend-2.onrender.com)
 
 
 Backend (Deployed): https://mini-compliance-backend.onrender.com
